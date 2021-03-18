@@ -22,10 +22,10 @@ fi
 OIFS="$IFS"
 IFS=$'\n'
 
-for TSE_FILE in $(find $SearchDest* -type f -name "*.tse" ); 
+for TSE_FILE in $(find $SearchDest* -type f -name "*.tse_bi" ); 
 do
 
-    python3 sql_send_tse_file.py -tse_file $TSE_FILE
+    python3 sql_send_tse_file.py -t $TSE_FILE
 
     if [ $? -eq 0 ]
     then
